@@ -116,10 +116,10 @@ public class Main {
                         if (index >= 0 && index < historyManager.getHistory().size()) {
                             DocumentMemento memento = historyManager.getHistory().get(index);
 
-                            // Восстановление состояния документа
+                            
                             document.restore(memento);
 
-                            // Отсекаем все поздние версии из истории
+                           
                             historyManager.truncateHistory(index);
 
                             System.out.println("-> Состояние успешно восстановлено. Поздние версии удалены из истории.");
