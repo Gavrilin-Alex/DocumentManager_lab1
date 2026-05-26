@@ -7,10 +7,7 @@ public class HistoryManager {
     public void saveHistory(DocumentMemento memento) { history.add(memento); }
     public List<DocumentMemento> getHistory() { return history; }
 
-    /**
-     * Удаляет все версии, которые идут после указанного индекса.
-     * Это исключает возможность отката к несуществующему "будущему" состоянию.
-     */
+    
     public void truncateHistory(int fromIndex) {
         if (fromIndex >= 0 && fromIndex < history.size()) {
             // Удаляем элементы с конца списка до нужного индекса
