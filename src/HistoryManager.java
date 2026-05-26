@@ -10,7 +10,7 @@ public class HistoryManager {
     
     public void truncateHistory(int fromIndex) {
         if (fromIndex >= 0 && fromIndex < history.size()) {
-            // Удаляем элементы с конца списка до нужного индекса
+          
             while (history.size() > fromIndex) {
                 history.remove(history.size() - 1);
             }
